@@ -1,0 +1,1057 @@
+{
+	"info": {
+		"_postman_id": "0a95dd36-b400-4c3a-82e7-03a7665d774a",
+		"name": "Product -api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19144340"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"firstName\": \"tester2\",\n    \"lastName\":\"tester2\",\n    \"telephone\": \"0709nigeria\",\n    \"email\":\"ab@gmail.com\",\n    \"password\": \"12345678\",\n    \"address\": {\n    \"houseNumber\": \"19\",\n    \"street\": \"Moleye Street\",\n    \"city\":\"somolu\",\n    \"state\":\"Lagos\",\n    \"country\":\"Nigeria\"\n  }\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"firstName\": \"tester2\",\n    \"lastName\":\"tester2\",\n    \"telephone\": \"0709nigeria\",\n    \"email\":\"ab@gmail.com\",\n    \"password\": \"12345678\",\n    \"address\": {\n    \"houseNumber\": \"19\",\n    \"street\": \"Moleye Street\",\n    \"city\":\"somolu\",\n    \"state\":\"Lagos\",\n    \"country\":\"Nigeria\"\n  }\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "465"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d1-9FgJGd8/30Q+PUFb4+ln5P6j+p0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jul 2023 12:21:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 201,\n    \"message\": \"registered\",\n    \"data\": {\n        \"data\": {\n            \"firstName\": \"tester2\",\n            \"lastName\": \"tester2\",\n            \"email\": \"ab@gmail.com\",\n            \"password\": \"$2a$10$m8ZTn3hNiLlxIbdAlcXy9OPTaG3vpiFm8/ijTmP4OAqU/ZOpRtPOG\",\n            \"address\": {\n                \"houseNumber\": \"19\",\n                \"street\": \"Moleye Street\",\n                \"city\": \"somolu\",\n                \"state\": \"Lagos\",\n                \"country\": \"Nigeria\"\n            },\n            \"telephone\": \"0709nigeria\",\n            \"isVerified\": false,\n            \"role\": \"user\",\n            \"createdAt\": \"2023-07-10T12:20:54.571Z\",\n            \"_id\": \"64abf7b43423f23e2ebcf807\",\n            \"__v\": 0\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Complete Signup with token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"firstName\": \"Godson\",\n    \"lastName\":\"Chinonye\",\n    \"telephone\": \"080679507323\",\n    \"email\":\"godsonesq@gmail.com\",\n    \"password\": \"12345678\",\n    \"role\": \"client\",\n    \"address\": {\n    \"address\": \"ejigbo\",\n    \"city\":\"Ikotun\",\n    \"state\":\"Lagos\",\n    \"country\":\"Nigeria\"\n  }\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/complete-signup?token=b7a71f2e9ef0e1d8098b01b7afb0b0c0ac78db9194d29e116aad518c3f683c3a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"complete-signup"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b7a71f2e9ef0e1d8098b01b7afb0b0c0ac78db9194d29e116aad518c3f683c3a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup with Magic Link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"email\":\"godsonesq@gmail.com\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/signup-link",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signup-link"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Signup with Magic Link",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"email\":\"godsonesq@gmail.com\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup-link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup-link"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"75-D3tIDtSQIhWjv+wGYtN6H2XZ+ns\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 10:57:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 201,\n    \"message\": \"registered\",\n    \"data\": {\n        \"data\": \"check your email for verification link\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "List Product for Sale",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFjMWI3ODI2Yzc4OTFiNWVjMWMzMTAiLCJlbWFpbCI6ImFiQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg5MDEyNzczLCJleHAiOjE2ODkwOTkxNzN9.nddJLhS833LiFFdFfFGDBykDAFiAgXfD0Mf6FX0pl40",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"name\": \"Nike Shoe\",\n    \"description\":\"A fairly used, quality Nike shoe\",\n     \"category\": \"fashion,men,wears\",\n    \"image\":[\n        {\n        \"url\": \"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b5ab0a6c-6393-4af6-abbc-4f1acaa6ed94/air-max-dawn-shoes-tx7TpB.png\",\n        \"type\": \"image/png\"\n    }\n    ],\n    \"discount\":400,\n    \"amount\": 7000,\n     \"sku\":2,\n    \"tags\": [\"shoe\", \"nike\"]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Product for Sale",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"name\": \"Nike Shoe\",\n    \"description\":\"A fairly used, quality Nike shoe\",\n     \"category\": \"fashion,men,wears\",\n    \"image\":[\n        {\n        \"url\": \"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b5ab0a6c-6393-4af6-abbc-4f1acaa6ed94/air-max-dawn-shoes-tx7TpB.png\",\n        \"type\": \"image/png\"\n    }\n    ],\n    \"discount\":500,\n    \"amount\": 5000,\n     \"sku\":2,\n    \"tags\": [\"shoe\", \"nike\"]\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "621"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26d-As9g5fUbVYp5pwBors2XhYNZFAk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jul 2023 13:53:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 201,\n    \"message\": \"product added to marketplace\",\n    \"data\": {\n        \"data\": {\n            \"name\": \"Nike Shoe\",\n            \"description\": \"A fairly used, quality Nike shoe\",\n            \"category\": \"fashion,men,wears\",\n            \"slug\": \"nike-shoe-1688997226123\",\n            \"image\": [\n                {\n                    \"url\": \"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b5ab0a6c-6393-4af6-abbc-4f1acaa6ed94/air-max-dawn-shoes-tx7TpB.png\",\n                    \"type\": \"image/png\",\n                    \"_id\": \"64ac0d6a4924262db79f4ba1\"\n                }\n            ],\n            \"discount\": 500,\n            \"amount\": 5000,\n            \"sku\": 2,\n            \"status\": \"pending\",\n            \"available\": true,\n            \"tags\": [\n                \"shoe\",\n                \"nike\"\n            ],\n            \"createdAt\": \"2023-07-10T13:53:21.922Z\",\n            \"_id\": \"64ac0d6a4924262db79f4ba0\",\n            \"reviews\": [],\n            \"__v\": 0\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Review to Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFjMWI3ODI2Yzc4OTFiNWVjMWMzMTAiLCJlbWFpbCI6ImFiQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg5MDAwODQ1LCJleHAiOjE2ODkwMDgwNDV9.gO9rYYGgwk9UzUwJ9-qzBbD-_S7ZsrhSqpVSCJzbUlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"review\": \"Welcome to Stack Overflow. Code-only answers are discouraged on Stack Overflow because they don't explain how it solves the problem. Please edit your answer to explain what this code does and how it improves on the existing upvoted answers this question already has, so that it is useful to other users with similar issues.\"\n\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/64ac1bb626c7891b5ec1c313/add-review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"64ac1bb626c7891b5ec1c313",
+						"add-review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n     \"email\":\"ab@gmail.com\",\n    \"password\": \"12345678\"\n  }\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n     \"email\":\"a@gmail.com\",\n    \"password\": \"12345678\"\n  }\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "707"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c3-9ps3OVab/drsAR1TNfctxnmQQBw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jul 2023 12:23:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"login successful\",\n    \"data\": {\n        \"data\": {\n            \"address\": {\n                \"houseNumber\": \"19\",\n                \"street\": \"Moleye Street\",\n                \"city\": \"somolu\",\n                \"state\": \"Lagos\",\n                \"country\": \"Nigeria\"\n            },\n            \"_id\": \"64abf654316cce98f085bd5a\",\n            \"firstName\": \"tester2\",\n            \"lastName\": \"tester2\",\n            \"email\": \"a@gmail.com\",\n            \"password\": \"$2a$10$gHdvwJVPrxW6QK4QgTh2OO5yLdGH736lMUfMwCECwUyCcWZlmBop2\",\n            \"telephone\": \"0809nigeria\",\n            \"isVerified\": false,\n            \"role\": \"user\",\n            \"createdAt\": \"2023-07-10T12:14:17.626Z\",\n            \"__v\": 0,\n            \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFiZjY1NDMxNmNjZTk4ZjA4NWJkNWEiLCJlbWFpbCI6ImFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODg5OTE4MTcsImV4cCI6MTY4ODk5OTAxN30.qf5M1_UZfU3Ssddg0AWMp503v1RdAmkoUQ3G3tZZEro\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n   \"firstName\": \"Timilehin\",\n    \"lastName\":\"John\"\n  }\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/62d724a34a43ef5b349bea66/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"62d724a34a43ef5b349bea66",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find one user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/62d728b7285eb35d1b119b47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"62d728b7285eb35d1b119b47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/62d71f7488274127b39a282e/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"62d71f7488274127b39a282e",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNsaWVudEBmaWxtbWFrZXJzbWFydC5jb20iLCJ1c2VySWQiOiJlN2YwNjQ3ZC03MDQzLTQ4N2EtODRkNy1mYTFlODkxMmZiNDgiLCJyb2xlIjoiY2xpZW50IiwiZmlyc3ROYW1lIjoiIiwibGFzdE5hbWUiOiIiLCJpYXQiOjE2ODg1Njg3MDQsImV4cCI6MTY5MTE2MDcwNCwiYXVkIjpbImFsbCJdLCJpc3MiOiJmaWxtbWFrZXJzbWFydCIsInN1YiI6ImF1dGgifQ.pjXKOeRcthO0xPnYlYjLkKK4NxXpzRkAZaq2go4HmSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seacrh for user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/search?amount=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Fetch All Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFiZjY1NDMxNmNjZTk4ZjA4NWJkNWEiLCJlbWFpbCI6ImFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODg5OTE4MTcsImV4cCI6MTY4ODk5OTAxN30.qf5M1_UZfU3Ssddg0AWMp503v1RdAmkoUQ3G3tZZEro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch All Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1398"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"576-5ozYIq4qJnxM/dU1oHHixmWr2J8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jul 2023 15:02:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"request successful\",\n    \"data\": {\n        \"data\": [\n            {\n                \"_id\": \"64ac1bb626c7891b5ec1c313\",\n                \"name\": \"Nike Shoe\",\n                \"description\": \"A fairly used, quality Nike shoe\",\n                \"category\": \"fashion,men,wears\",\n                \"slug\": \"nike-shoe-1689000886398\",\n                \"image\": [\n                    {\n                        \"url\": \"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b5ab0a6c-6393-4af6-abbc-4f1acaa6ed94/air-max-dawn-shoes-tx7TpB.png\",\n                        \"type\": \"image/png\",\n                        \"_id\": \"64ac1bb626c7891b5ec1c314\"\n                    }\n                ],\n                \"discount\": 500,\n                \"amount\": 5000,\n                \"sku\": 2,\n                \"status\": \"pending\",\n                \"available\": true,\n                \"tags\": [\n                    \"shoe\",\n                    \"nike\"\n                ],\n                \"reviews\": [\n                    {\n                        \"_id\": \"64ac1c0a26c7891b5ec1c317\",\n                        \"review\": \"Welcome to Stack Overflow. Code-only answers are discouraged on Stack Overflow because they don't explain how it solves the problem. Please edit your answer to explain what this code does and how it improves on the existing upvoted answers this question already has, so that it is useful to other users with similar issues.\",\n                        \"user\": {\n                            \"_id\": \"64ac1b7826c7891b5ec1c310\",\n                            \"firstName\": \"tester2\",\n                            \"email\": \"ab@gmail.com\"\n                        }\n                    },\n                    {\n                        \"_id\": \"64ac1d927d14bb20fca756f9\",\n                        \"review\": \"another review added\",\n                        \"user\": {\n                            \"_id\": \"64ac1b7826c7891b5ec1c310\",\n                            \"firstName\": \"tester2\",\n                            \"email\": \"ab@gmail.com\"\n                        }\n                    }\n                ],\n                \"seller\": {\n                    \"address\": {\n                        \"houseNumber\": \"19\",\n                        \"street\": \"Moleye Street\",\n                        \"city\": \"somolu\",\n                        \"state\": \"Lagos\",\n                        \"country\": \"Nigeria\"\n                    },\n                    \"_id\": \"64ac1b7826c7891b5ec1c310\",\n                    \"email\": \"ab@gmail.com\"\n                },\n                \"createdAt\": \"2023-07-10T14:53:19.616Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch All Verified Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFiZjY1NDMxNmNjZTk4ZjA4NWJkNWEiLCJlbWFpbCI6ImFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODg5OTE4MTcsImV4cCI6MTY4ODk5OTAxN30.qf5M1_UZfU3Ssddg0AWMp503v1RdAmkoUQ3G3tZZEro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/verified",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"verified"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find One Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/64ac1bb626c7891b5ec1c313",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"64ac1bb626c7891b5ec1c313"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find One Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/64ac1bb626c7891b5ec1c313",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"64ac1bb626c7891b5ec1c313"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1396"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"574-YOk/TbM+7vfPGjxXMFLUhraiQUg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jul 2023 15:06:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"request successful\",\n    \"data\": {\n        \"data\": {\n            \"_id\": \"64ac1bb626c7891b5ec1c313\",\n            \"name\": \"Nike Shoe\",\n            \"description\": \"A fairly used, quality Nike shoe\",\n            \"category\": \"fashion,men,wears\",\n            \"slug\": \"nike-shoe-1689000886398\",\n            \"image\": [\n                {\n                    \"url\": \"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b5ab0a6c-6393-4af6-abbc-4f1acaa6ed94/air-max-dawn-shoes-tx7TpB.png\",\n                    \"type\": \"image/png\",\n                    \"_id\": \"64ac1bb626c7891b5ec1c314\"\n                }\n            ],\n            \"discount\": 500,\n            \"amount\": 5000,\n            \"sku\": 2,\n            \"status\": \"pending\",\n            \"available\": true,\n            \"tags\": [\n                \"shoe\",\n                \"nike\"\n            ],\n            \"reviews\": [\n                {\n                    \"_id\": \"64ac1c0a26c7891b5ec1c317\",\n                    \"review\": \"Welcome to Stack Overflow. Code-only answers are discouraged on Stack Overflow because they don't explain how it solves the problem. Please edit your answer to explain what this code does and how it improves on the existing upvoted answers this question already has, so that it is useful to other users with similar issues.\",\n                    \"user\": {\n                        \"_id\": \"64ac1b7826c7891b5ec1c310\",\n                        \"firstName\": \"tester2\",\n                        \"email\": \"ab@gmail.com\"\n                    }\n                },\n                {\n                    \"_id\": \"64ac1d927d14bb20fca756f9\",\n                    \"review\": \"another review added\",\n                    \"user\": {\n                        \"_id\": \"64ac1b7826c7891b5ec1c310\",\n                        \"firstName\": \"tester2\",\n                        \"email\": \"ab@gmail.com\"\n                    }\n                }\n            ],\n            \"seller\": {\n                \"address\": {\n                    \"houseNumber\": \"19\",\n                    \"street\": \"Moleye Street\",\n                    \"city\": \"somolu\",\n                    \"state\": \"Lagos\",\n                    \"country\": \"Nigeria\"\n                },\n                \"_id\": \"64ac1b7826c7891b5ec1c310\",\n                \"email\": \"ab@gmail.com\"\n            },\n            \"createdAt\": \"2023-07-10T14:53:19.616Z\",\n            \"__v\": 0\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update  Product Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFiZjY1NDMxNmNjZTk4ZjA4NWJkNWEiLCJlbWFpbCI6ImFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODg5OTE4MTcsImV4cCI6MTY4ODk5OTAxN30.qf5M1_UZfU3Ssddg0AWMp503v1RdAmkoUQ3G3tZZEro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"verified\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/64ac0d6a4924262db79f4ba0/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"64ac0d6a4924262db79f4ba0",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
